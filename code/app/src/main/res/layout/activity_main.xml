@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,18 +8,53 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context = ".MainActivity">
+    <!-- EditText for entering city names -->
+    <EditText
+        android:id="@+id/cityInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter city name"
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
 
-    </TextView>
+    <!-- Add City Button -->
+    <Button
+        android:id="@+id/addCityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add City"
+        app:layout_constraintTop_toBottomOf="@+id/cityInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
 
+    <!-- Delete City Button -->
+    <Button
+        android:id="@+id/deleteCityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Delete City"
+        app:layout_constraintTop_toBottomOf="@+id/addCityButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- ListView for displaying city names -->
     <ListView
         android:id="@+id/city_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </ListView>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteCityButton"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
