@@ -8,7 +8,7 @@
 
 ## References and Resources
 
-List any resources used here, or simply put `N/A` if not applicable.
+https://eclass.srv.ualberta.ca/pluginfile.php/11705542/mod_label/intro/CMPUT301_LAB_2_INSTRUCTIONS.pdf
 
 ## Verbal Collaboration
 
